@@ -7,7 +7,7 @@ body {
 }
 
 #container {
-  border: 15px solid blue;
+  border: 15px solid rgb(45, 45, 255);
   border-radius: 25px;
   width: 500px;
   height: 200px;

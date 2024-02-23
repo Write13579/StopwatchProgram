@@ -3,12 +3,14 @@ let timer: number;
 let startTime = 0;
 let elapsedTime = 0;
 let isRunning = false;
-console.log(Date.now());
+
 function start() {
   if (!isRunning) {
     startTime = Date.now() - elapsedTime;
     timer = setInterval(update, 10);
     isRunning = true;
+  } else {
+    debil();
   }
 }
 
@@ -17,6 +19,8 @@ function stop() {
     clearInterval(timer);
     elapsedTime = Date.now() - startTime;
     isRunning = false;
+  } else {
+    debil2();
   }
 }
 
@@ -46,4 +50,12 @@ function update() {
     .padStart(2, "0");
 
   display.textContent = `${hours}:${minutes}:${seconds}:${miliseconds}`;
+}
+
+function debil() {
+  window.alert(`no juz przeciez leci timer po co to klikasz`);
+}
+
+function debil2() {
+  window.alert(`juz bardziej tego timera nie zatrzymasz`);
 }
